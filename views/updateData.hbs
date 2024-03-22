@@ -1,0 +1,29 @@
+<div class="form-part contacts" style="height: 79%;">
+    <div class="list-container" style="height: 30rem;">
+        {{#each AllData}}
+            {{> data}}
+        {{/each}}
+    </div>
+</div>
+
+
+<form class="form" data-key="{{thisData.id}}">
+    <input class="input" type="text" required name="name" placeholder="ФИО" value="{{thisData.name}}"
+           onchange="blockButton('{{thisData.name}}', '{{thisData.phone}}')">
+
+    <input class="input" type="tel" required name="phone" placeholder="Телефон" value="{{thisData.phone}}"
+           onchange="blockButton('{{thisData.name}}', '{{thisData.phone}}')">
+</form>
+
+
+<div class="controls-wrapper">
+    <div class="form-part control" >
+        <button onclick="updateData()">Изменить</button>
+    </div>
+    <div class="form-part control">
+        <button onclick="deleteData()" id="delete-button">Удалить</button>
+    </div>
+    <div class="form-part control" >
+        <button onclick="window.location.href = '/'">Отказаться</button>
+    </div>
+</div>
