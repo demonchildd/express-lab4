@@ -4,6 +4,7 @@ const dataController = require('../controllers/dataController.js');
 
 dataRouter.get('/', dataController.getAllData);
 
+
 dataRouter.get('/add', dataController.addDataGet);
 dataRouter.post('/add', dataController.addDataPost);
 

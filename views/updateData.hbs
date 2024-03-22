@@ -8,15 +8,15 @@
 
 
 <form class="form" data-key="{{thisData.id}}">
-    <input class="input" type="text" required name="name" placeholder="ФИО" value="{{thisData.name}}"
-           onchange="blockButton('{{thisData.name}}', '{{thisData.phone}}')">
+    <input class="input" type="text" required id="nameForUpdate" name="name" placeholder="ФИО" value="{{thisData.name}}"
+           oninput="blockButton('{{thisData.name}}', '{{thisData.phone}}')">
 
-    <input class="input" type="tel" required name="phone" placeholder="Телефон" value="{{thisData.phone}}"
-           onchange="blockButton('{{thisData.name}}', '{{thisData.phone}}')">
+    <input class="input" type="tel" required id="phoneForUpdate"  name="phone" placeholder="Телефон" value="{{thisData.phone}}"
+           oninput="blockButton('{{thisData.name}}', '{{thisData.phone}}')">
 </form>
 
 
-<div class="controls-wrapper">
+<div class="controls-wrapper-button">
     <div class="form-part control" >
         <button onclick="updateData()">Изменить</button>
     </div>
@@ -24,6 +24,8 @@
         <button onclick="deleteData()" id="delete-button">Удалить</button>
     </div>
     <div class="form-part control" >
-        <button onclick="window.location.href = '/'">Отказаться</button>
+        <button onclick="{{refuse}}">Отказаться</button>
     </div>
 </div>
+
+<div id="error-message"></div>

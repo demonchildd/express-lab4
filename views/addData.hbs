@@ -8,18 +8,18 @@
 
 
 <form class="form">
-    <div class="controls-wrapper">
-        <input class="input" type="text" required name="name" placeholder="ФИО">
-        <input class="input" type="tel" required name="phone" placeholder="Телефон">
-    </div>
+    <input class="input" type="text" required name="name" placeholder="ФИО">
+    <input class="input" type="tel" required  name="phone" placeholder="Телефон">
 </form>
 
 
-<div class="controls-wrapper">
+<div class="controls-wrapper-button">
     <div class="form-part control">
         <button onclick="addData()">Добавить</button>
     </div>
     <div class="form-part control">
-        <button onclick="window.location.href = '/'">Отказаться</button>
+        <button onclick="{{refuse}}">Отказаться</button>
     </div>
 </div>
+
+<div id="error-message"></div>

@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
-const hbs = require('express-handlebars').create({extname: '.hbs',});
+const hbs = require('express-handlebars').create({
+    extname: '.hbs',
+    helpers: { refuse: () => "window.location.href = '/'" }
+});
 const dataRouter = require('./routers/dataRouter');
 
 app.set('port', 3000);

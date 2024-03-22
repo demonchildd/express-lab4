@@ -1,6 +1,8 @@
 const AllData = require('../data') || [];
 const uuid = require('uuid');
 const fs = require('fs');
+
+
 module.exports = {
 
     async getAllData(req, res) {
@@ -14,18 +16,7 @@ module.exports = {
     },
 
 
-    async getData(req, res) {
-        try {
-            if (req.query.id) {
-                const data = await AllData.find(c => c.id === req.query.id);
-                if(!data)
-                    res.json("Нет такого");
-                res.json(data);
-            } else {
-                res.end('Parameter not found');
-            }
-        } catch (err) { console.log(err); }
-    },
+    
 
 
     async addDataPost(req, res) {

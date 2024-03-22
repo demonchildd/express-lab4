@@ -1,121 +1,90 @@
-/*global*/
-*, ::after, ::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    background-color: #ffffff;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-}
-
-button {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    padding: 2%;
-    border: 1px solid black;
-    border-radius: 1rem;
-    background-color: #ba90fa;
-    font-size: 3rem;
-    font-weight: 700;
-    width: 25rem;
-    cursor: pointer;
-}
-
-input {
-    padding: 3%;
-}
-
-button:not([disabled]):hover  {
-    background-color: #a678ec;
-    color: #000000;
-}
-
-
+/* Стили для контейнера */
 .container {
-    width: 50%;
-    margin: 10vh auto 0;
-    padding-top: 5vh;
-    height: 80vh;
-    background-color: #ffffff;
-    /* border: 0.5rem solid black; */
-    /* border-radius: 1rem; */
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 80%; /* Ширина контейнера */
+    margin: 20px auto; /* Выравнивание по центру */
+    padding: 20px; /* Поля вокруг контейнера */
+    background-color: #f0f0f0; /* Цвет фона контейнера */
+    border: 1px solid #ccc; /* Рамка вокруг контейнера */
+    border-radius: 5px; /* Скругление углов */
+    box-sizing: border-box; /* Учет внутренних отступов и рамки в общей ширине */
 }
 
+/* Стили для формы */
+form {
+    width: 100%; /* Ширина формы */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+.control {
+    margin-top: 10px;
+    display: flex; /* Отображение элементов в ряд */
+    justify-content: center; /* Выравнивание элементов по центру по горизонтали */
+    align-items: center; /* Выравнивание элементов по центру по вертикали */
+}
+/* Стили для входных полей */
+.input {
+    width: 100%; /* Ширина полей */
+    margin-top: 10px;
+    margin-bottom: 10px; /* Отступ снизу */
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Рамка вокруг полей */
+    border-radius: 5px; /* Скругление углов */
+    box-sizing: border-box; /* Учет внутренних отступов и рамки в общей ширине */
+    font-size: 16px; /* Размер шрифта */
+}
 
+/* Стили для кнопок */
+button {
+    padding: 10px 20px; /* Внутренние отступы */
+    margin-right: 10px; /* Отступ справа */
+    border: none; /* Удаление границы */
+    border-radius: 5px; /* Скругление углов */
+    background-color: #007bff; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Изменение курсора при наведении */
+}
+
+button:hover {
+    background-color: #d70707; /* Изменение цвета фона при наведении */
+}
+
+/* Стили для списка контактов */
+.list-container {
+    max-height: 200px; /* Максимальная высота контейнера списка */
+    overflow-y: auto; /* Появление скроллбара при необходимости */
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Рамка вокруг контейнера */
+    border-radius: 5px; /* Скругление углов */
+    background-color: #fff; /* Цвет фона */
+}
+
+/* Стили для контактов */
 .contact {
-    height: 20%;
-
-    background-color: #eda1fc;
-    border: 0.25rem solid black;
-    margin-bottom: 1rem;
-
-    display: flex;
-    justify-content: space-around;
-    gap: 10rem;
-    align-items: center;
-
-
-    font-size: 3rem;
-    font-weight: bold;
+    padding: 10px; /* Внутренние отступы */
+    margin-bottom: 10px; /* Отступ снизу */
+    border: 1px solid #ccc; /* Рамка вокруг контакта */
+    border-radius: 5px; /* Скругление углов */
+    background-color: #f0f0f0; /* Цвет фона */
+    cursor: pointer; /* Изменение курсора при наведении */
 }
 
 .contact:hover {
-    cursor: pointer;
-    background-color: #e28ff3;
-    color: black;
+    background-color: #e0e0e0; /* Изменение цвета фона при наведении */
 }
 
-.input {
-    font-size: 1.6em;
-    border-radius: 0.5rem;
-    height: 4vh;
-    background-color: #ffffff;
-    color: black;
-    width: 80%;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+.controls-wrapper-button {
+    display: flex; /* Отображение элементов в ряд */
+    justify-content: center; /* Выравнивание элементов по центру по горизонтали */
+    align-items: center; /* Выравнивание элементов по центру по вертикали */
 }
 
-.form {
-    height: 10vh;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+button:not([disabled]):hover  {
+    background-color: #0056b3;
+    
 }
 
-
-
-
-.contacts {
-    width: 80%;
-    margin-bottom: 5vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.controls-wrapper {
-    display: flex;
-    height: 100%;
-}
-
-.contacts .list-container {
-    width: 100%;
-    padding: 1rem;
-    border: 4px solid black;
-    height: 32rem;
-    overflow-y: scroll;
+#error-message {
+    margin: 10px;
+    color: #d70707;
+    text-align: center;
 }
