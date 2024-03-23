@@ -10,7 +10,6 @@ app.set('port', 3000);
 app.engine('.hbs', hbs.engine);
 app.set('view engine', '.hbs');
 app.use(express.static(__dirname + '/public'));
-console.log(__dirname+ '/public');
 app.use(express.json());
 app.use('/', dataRouter);
 
