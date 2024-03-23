@@ -1,86 +1,81 @@
-/* Стили для контейнера */
 .container {
-    width: 80%; /* Ширина контейнера */
-    margin: 20px auto; /* Выравнивание по центру */
-    padding: 20px; /* Поля вокруг контейнера */
-    background-color: #f0f0f0; /* Цвет фона контейнера */
-    border: 1px solid #ccc; /* Рамка вокруг контейнера */
-    border-radius: 5px; /* Скругление углов */
-    box-sizing: border-box; /* Учет внутренних отступов и рамки в общей ширине */
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-/* Стили для формы */
 form {
-    width: 100%; /* Ширина формы */
-    margin-bottom: 20px; /* Отступ снизу */
+    width: 100%;
+    margin-bottom: 20px;
 }
+
 .control {
     margin-top: 10px;
-    display: flex; /* Отображение элементов в ряд */
-    justify-content: center; /* Выравнивание элементов по центру по горизонтали */
-    align-items: center; /* Выравнивание элементов по центру по вертикали */
-}
-/* Стили для входных полей */
-.input {
-    width: 100%; /* Ширина полей */
-    margin-top: 10px;
-    margin-bottom: 10px; /* Отступ снизу */
-    padding: 10px; /* Внутренние отступы */
-    border: 1px solid #ccc; /* Рамка вокруг полей */
-    border-radius: 5px; /* Скругление углов */
-    box-sizing: border-box; /* Учет внутренних отступов и рамки в общей ширине */
-    font-size: 16px; /* Размер шрифта */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Стили для кнопок */
+.input {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
 button {
-    padding: 10px 20px; /* Внутренние отступы */
-    margin-right: 10px; /* Отступ справа */
-    border: none; /* Удаление границы */
-    border-radius: 5px; /* Скругление углов */
-    background-color: #007bff; /* Цвет фона */
-    color: #fff; /* Цвет текста */
-    font-size: 16px; /* Размер шрифта */
-    cursor: pointer; /* Изменение курсора при наведении */
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #d70707; /* Изменение цвета фона при наведении */
+    background-color: #d70707;
 }
 
-/* Стили для списка контактов */
 .list-container {
-    max-height: 200px; /* Максимальная высота контейнера списка */
-    overflow-y: auto; /* Появление скроллбара при необходимости */
-    padding: 10px; /* Внутренние отступы */
-    border: 1px solid #ccc; /* Рамка вокруг контейнера */
-    border-radius: 5px; /* Скругление углов */
-    background-color: #fff; /* Цвет фона */
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
 }
 
-/* Стили для контактов */
 .contact {
-    padding: 10px; /* Внутренние отступы */
-    margin-bottom: 10px; /* Отступ снизу */
-    border: 1px solid #ccc; /* Рамка вокруг контакта */
-    border-radius: 5px; /* Скругление углов */
-    background-color: #f0f0f0; /* Цвет фона */
-    cursor: pointer; /* Изменение курсора при наведении */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
 }
 
 .contact:hover {
-    background-color: #e0e0e0; /* Изменение цвета фона при наведении */
+    background-color: #e0e0e0;
 }
 
 .controls-wrapper-button {
-    display: flex; /* Отображение элементов в ряд */
-    justify-content: center; /* Выравнивание элементов по центру по горизонтали */
-    align-items: center; /* Выравнивание элементов по центру по вертикали */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-button:not([disabled]):hover  {
+button:not([disabled]):hover {
     background-color: #0056b3;
-    
 }
 
 #error-message {
